@@ -21,19 +21,6 @@ namespace DecisiMaratonaApp
             CollezioneDati.Add(documento);
         }
 
-        public void SalvaSuFile()
-        {
-            using (FileStream flusso = new FileStream("dati.txt", FileMode.CreateNew, FileAccess.Write))
-            {
-                StreamWriter scrittore = new StreamWriter(flusso);
-                foreach (var documento in CollezioneDati)
-                {
-                    scrittore.WriteLine(documento.ConcatenaValori());
-                }
-                scrittore.Flush();
-            }
-        }
-
         public void LeggiDaFile()
         {
             using (FileStream flusso = new FileStream("dati.txt", FileMode.Open, FileAccess.Read))
@@ -66,6 +53,47 @@ namespace DecisiMaratonaApp
             min = (ore * 60) + minuti;
 
             return min;
+        }
+
+        public int DurataMaratona(string Durata, string NomeAtleta, string Citta)
+        {
+            int duratamaratona = 0;
+
+            foreach(var dati in CollezioneDati)
+            {
+                if(NomeAtleta == dati.NomeAtleta && Citta == dati.Citta)
+                {
+                    duratamaratona = dati.Durata;
+                }
+            }
+            return duratamaratona;
+        }
+
+        public string CercaPartecipanti (string Citta)
+        {
+            string partecipanti = "";
+
+            foreach(var lista in CollezioneDati)
+            {
+                if(Citta == lista.Citta)
+                {
+                    partecipanti += lista.NomeAtleta + " - ";
+                }
+            }
+            return partecipanti;
+        }
+
+        public void Salva()
+        {
+            using (FileStream flusso = new FileStream("dati.txt", FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                StreamWriter scrittore = new StreamWriter(flusso);
+                foreach (var documento in CollezioneDati)
+                {
+                    scrittore.WriteLine(documento.ConcatenaValori());
+                }
+                scrittore.Flush();
+            }
         }
     }
 }

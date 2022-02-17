@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\DecisiMaratonaApp\\DecisiMaratonaApp\\DecisiMaratonaApp.csproj",
+      "projectUniqueName": "C:\\Users\\Utente\\Documents\\GitHub\\.github\\DecisiMaratonaApp\\DecisiMaratonaApp\\DecisiMaratonaApp.csproj",
       "projectName": "DecisiMaratonaApp",
-      "projectPath": "C:\\Users\\Utente\\Desktop\\DecisiMaratonaApp\\DecisiMaratonaApp\\DecisiMaratonaApp.csproj",
+      "projectPath": "C:\\Users\\Utente\\Documents\\GitHub\\.github\\DecisiMaratonaApp\\DecisiMaratonaApp\\DecisiMaratonaApp.csproj",
       "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\Desktop\\DecisiMaratonaApp\\DecisiMaratonaApp\\obj\\",
+      "outputPath": "C:\\Users\\Utente\\Documents\\GitHub\\.github\\DecisiMaratonaApp\\DecisiMaratonaApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",

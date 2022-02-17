@@ -5,14 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DecisiMaratonaApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <TextBox x:Name="TxtNomeAtleta"  Margin="10" Text="Inserisci il nome di un'atleta"/>
-        <TextBox x:Name="TxtCitta"  Margin="10" Text="Inserisci il nome dellà città"/>
-            <StackPanel Orientation="Horizontal">
+        Title="MainWindow" Height="788" Width="1092">
+    <StackPanel Margin="0,0,0,-6">
+        <TextBox x:Name="TxtNomeAtleta"  Margin="10" Text="Inserisci il nome di un'atleta" GotFocus="TxtNomeAtleta_GotFocus"/>
+        <TextBox x:Name="TxtCitta"  Margin="10" Text="Inserisci il nome dellà città" GotFocus="TxtCitta_GotFocus"/>
+        <StackPanel Orientation="Horizontal">
             <Button x:Name="BtnTempo"  Margin="10" Content="Calcola Tempo" Click="BtnTempo_Click"/>
+            <Button x:Name="BtnCercaPartecipantiTappa"  Margin="10" Content="Cerca Partecipanti" Click="BtnCercaPartecipantiTappa_Click"/>
             <Button x:Name="BtnLeggiFile" Margin="10" Content="Leggi tutto da file" Click="BtnLeggiFile_Click"/>
-            </StackPanel>
+        </StackPanel>
         <DataGrid x:Name="DgElencoDati" Margin="10" Height="230"/>
+        <Label x:Name="lblTesto" Content="" Margin="10"/>
+        <Separator Height="56"></Separator>
+        <StackPanel>
+            <TextBox x:Name="TxtNomeAtletaDaAggiungere"  Margin="10" Text="Inserisci il nome di un'atleta da aggiungere" GotFocus="TxtNomeAtletaDaAggiungere_GotFocus"/>
+            <TextBox x:Name="TxtSocietaDaAggiungere"  Margin="10" Text="Inserisci il nome della societa da aggiungere" GotFocus="TxtSocietaDaAggiungere_GotFocus"/>
+            <TextBox x:Name="TxtDurataDaAggiungere"  Margin="10" Text="Inserisci la durata da aggiungere" GotFocus="TxtDurataDaAggiungere_GotFocus"/>
+            <TextBox x:Name="TxtCittaDaAggiungere"  Margin="10" Text="Inserisci il nome dellà città da aggiungere" GotFocus="TxtCittaDaAggiungere_GotFocus"/>
+            <Button x:Name="BtnAggiungi"  Margin="10" Content="Aggiungi" Click="BtnAggiungi_Click"/>
+            <Button x:Name="BtnAnalizza"  Margin="10" Content="Analizza" Click="BtnAnalizza_Click"/>
+        </StackPanel>
     </StackPanel>
 </Window>

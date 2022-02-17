@@ -19,5 +19,10 @@ namespace DecisiMaratonaApp
             return NomeAtleta + "%" + Societa + "%" + Durata + "%" + Citta;
         }
 
+        public string ConcatenaValoriAnalizzati()
+        {
+            return NomeAtleta + "%" + Durata;
+        }
+
     }
 }
